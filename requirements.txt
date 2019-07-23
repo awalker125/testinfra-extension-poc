@@ -1,0 +1,26 @@
+#versions are pinned for stability
+#Ansible and kubespray
+ansible==2.7.8
+ansible-lint==3.4.21
+mitogen==0.2.7
+pywinrm==0.3.0 
+pykerberos==1.2.1 
+requests-kerberos==0.12.0
+jinja2==2.9.6
+netaddr==0.7.19
+pbr==4.0.4
+ansible-modules-hashivault==3.9.5
+hvac==0.5.0
+#aws stuff
+awscli==1.14.5
+s3cmd==2.0.1
+python-magic
+openshift==0.8.7
+kubernetes==9.0.0
+passlib==1.7.1
+urllib3==1.23
+#aws boto for ansible
+boto==2.49.0
+botocore==1.8.9
+yamllint==1.15.0
+jmespath
