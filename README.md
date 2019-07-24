@@ -12,11 +12,13 @@ The provisioner will install docker and python pip from epel to enable somewhere
 
 We want to create a docker image with various tools and test the resulting image with testinfra.
 
-While the are built in tests for most of the things we want to test it would be nice to extend testinfra to test our tool versions. While this is trivial use case it may be useful for more complex scenarios.
+While there are built in tests for most of the things we want to test, it would be nice to extend testinfra to test our tool versions. 
+
+While this is trivial use case it may be useful for more complex scenarios.
 
 ## Make
 
-The is a `Makefile` in the repo to both run and document the various commands used.
+There is a `Makefile` in the repo to both run and document the various commands used.
 
 ### Setup
 
@@ -35,7 +37,8 @@ cd /vagrant
 make venv
 ```
 
-Install the dev deps i.e testinfra
+Install the dev deps i.e testinfra and other pip modules used by the tests.
+
 ```bash
 . ~/venv/bin/activate
 make dev
@@ -64,7 +67,7 @@ make test
 
 ### Clean up containers
 
-After test runs the containers will stay alive to allow interactive debug with ```docker exec```.
+After each test run the containers will stay alive to allow interactive debug with ```docker exec```.
 
 To clean this up run 
 
@@ -90,9 +93,9 @@ These are our tests we want to run. There is examples copied straight from the t
 
 ### tests/fixtures/echo.py
 
-This is loosely based on [testinfra-echo](https://github.com/philpep/testinfra-echo) although I could not get this to work as is and I did not want to package my fixture as a separate pip module to install. That approach is probably better if the fixture is reusable on multiple projects.
+This is loosely based on [testinfra-echo](https://github.com/philpep/testinfra-echo) although I could not get this to work as is because the fixtures exposed by testinfra have changed. I also did not want to package my fixture as a separate pip module to install. That approach is probably better if the fixture is reusable on multiple projects.
 
-I think it might be out of date because the `Command` fixture does not seem to exist anymore. It functionality is part of `host` now. The example in `echo.py` uses the host fixture. This get injected when needed.
+I think the example might be out of date because the `Command` fixture does not seem to exist anymore. It functionality is part of `host` now. The example in `echo.py` uses the host fixture. This get injected when needed.
 
 
 ### tests/fixtures/kubectl_binary.py
