@@ -6,7 +6,7 @@ mitogen==0.2.7
 pywinrm==0.3.0 
 pykerberos==1.2.1 
 requests-kerberos==0.12.0
-jinja2==2.9.6
+jinja2==2.11.3
 netaddr==0.7.19
 pbr==4.0.4
 ansible-modules-hashivault==3.9.5
