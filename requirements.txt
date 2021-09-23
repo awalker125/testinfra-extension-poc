@@ -1,6 +1,6 @@
 #versions are pinned for stability
 #Ansible and kubespray
-ansible==2.7.16
+ansible==4.2.0
 ansible-lint==3.4.21
 mitogen==0.2.7
 pywinrm==0.3.0 
